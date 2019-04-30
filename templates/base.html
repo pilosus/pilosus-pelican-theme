@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+
+    <!-- Mobile Specific Metas
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->	
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/normalize.css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/skeleton.css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/custom.css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css" />
+
+    <!-- Favicon
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/favicon.png">
+
+    <!-- Feeds
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->	
+    {% if FEED_ALL_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+    {% endif %}
+    {% if FEED_ALL_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+    {% endif %}
+    {% block extra_head %}{% endblock extra_head %}
+  </head>
+
+  <!-- Primary Page Layout
+       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <body id="index" class="home">
+    <div class="container">
+
+      <section class="header">
+	<h2 class="title"><a class="header-link" href="{{ SITEURL }}/">{{ SITENAME }} {% if SITESUBTITLE %}<strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h2>
+      </section>
+
+      <div class="navbar-spacer"></div>
+      <nav class="navbar">
+	<div class="container">
+          <ul class="navbar-list">
+	    {% for title, link in MENUITEMS %}
+	    <li class="navbar-item"><a class="navbar-link" href="{{ link }}">{{ title }}</a></li>
+            {% endfor %}
+	    
+            {% if DISPLAY_PAGES_ON_MENU -%}
+            {% for pg in pages %}
+            <li class="navbar-item"><a {% if pg == page %} class="navbar-link hl"{% else %} class="navbar-link"{% endif %} href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
+            {% endfor %}
+            {% endif %}
+            {% if DISPLAY_CATEGORIES_ON_MENU -%}
+            {% for cat, null in categories %}
+            <li class="navbar-item"><a {% if cat == category %} class="navbar-link hl"{% else %} class="navbar-link"{% endif %} href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+            {% endfor %}
+            {% endif %}
+          </ul>
+	</div>
+      </nav>
+
+      <div class="content">
+	{% block content %}
+	{% endblock %}
+      </div>
+
+      <div class="navbar-spacer"></div>
+      <section class="extras">
+        {% if LINKS %}
+        <ul class="navbar-list">
+          {% for name, link in LINKS %}
+          <li class="navbar-item"><a class="navbar-link" href="{{ link }}">{{ name }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
+        <ul class="navbar-list">
+          {% if FEED_ALL_ATOM %}
+          <li class="navbar-item"><a class="navbar-link" href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate">atom feed</a></li>
+          {% endif %}
+          {% if FEED_ALL_RSS %}
+          <li class="navbar-item"><a class="navbar-link" href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate">rss feed</a></li>
+          {% endif %}
+
+          {% for name, link in SOCIAL %}
+          <li class="navbar-item"><a class="navbar-link" href="{{ link }}">{{ name }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </section><!-- /#extras -->
+
+      <footer class="pelican">
+        <address id="about" class="vcard body">
+          Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+        </address><!-- /#about -->
+      </footer><!-- /#contentinfo -->
+
+      {% include 'analytics.html' %}
+      {% include 'disqus_script.html' %}
+    </div>
+  </body>
+</html>
