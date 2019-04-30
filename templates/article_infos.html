@@ -17,7 +17,7 @@
   </span>
   {% endif %}
   <br />
-  <span>In <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>.</spap>
+  <span>In <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>.</span>
   {% include 'taglist.html' %}
   {% import 'translations.html' as translations with context %}
   {{ translations.translations_for(article) }}
