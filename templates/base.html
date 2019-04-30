@@ -4,27 +4,35 @@
     <meta charset="utf-8" />
     <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
 
-    <!-- Mobile Specific Metas
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- FONT
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Open Graph Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    {% if article and article.og %}
+    {% for tag in article.og %}
+    <meta property="{{tag[0]}}" content="{{tag[1]|striptags|e}}" />
+    {% endfor %}
+    {% endif %}
+
+    {% if page and page.og %}
+    {% for tag in page.og %}
+    <meta property="{{tag[0]}}" content="{{tag[1]|striptags|e}}" />
+    {% endfor %}
+    {% endif %}
+
+    <!-- FONT –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-    <!-- CSS
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->	
+    <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/normalize.css" />
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/skeleton.css" />
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/custom.css" />
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css" />
 
-    <!-- Favicon
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Favicon –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/favicon.png">
 
-    <!-- Feeds
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->	
+    <!-- Feeds –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     {% if FEED_ALL_ATOM %}
     <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
     {% endif %}
@@ -34,8 +42,7 @@
     {% block extra_head %}{% endblock extra_head %}
   </head>
 
-  <!-- Primary Page Layout
-       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Primary Page Layout  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <body id="index" class="home">
     <div class="container">
 
