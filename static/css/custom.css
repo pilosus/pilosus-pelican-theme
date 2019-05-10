@@ -91,27 +91,56 @@
 /***********/
 
 .content {
-    padding: 4rem 0;
+    padding: 0;
+}
+
+.post-entry, .page-entry {
+    padding: 3rem 0;
+    border-bottom: 1px dotted #eee;
+}
+
+.post-title, .page-title {
+
 }
 
 .post-info {
     padding-bottom: 2rem;
 }
 
-/* Sumary */
-.first.last {
+.post-summary {
     margin-bottom: 0;
 }
 
-.pelican {
+.first.last {
+    margin-bottom: 0rem;
+}
+
+/***********/
+/* Footer  */
+/***********/
+
+.footer-pelican {
     padding: 3rem 0;
 }
 
-.post-list {
-    list-style: none;
+/***********/
+/* Images  */
+/***********/
+
+img.align-left {
+    float: left;
+    padding-right: 1rem;
 }
 
-.other-posts {
-    padding: 2rem 0;
-    border-top: 1px solid #eee;
+img.align-right {
+    float: right;
+    padding-left: 1rem;
+}
+
+/***********/
+/*  Text   */
+/***********/
+
+.highlight {
+    font-size: 90%;
 }
