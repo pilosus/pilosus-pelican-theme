@@ -37,3 +37,22 @@ $ pelican content -s pelicanconf.py -t /your/path/to/pilosus-pelican-theme
 ```
 You can also define `THEME` variable in your settings to point to the
 location of your preferred theme.
+
+
+## Usage
+
+Based on Skeleton CSS, the theme supports all its typography. A few style classes were added to
+[customs.css](https://github.com/pilosus/pilosus-pelican-theme/blob/master/static/css/custom.css)
+to play nicely with some [reStructuredText directives](http://docutils.sourceforge.net/docs/ref/rst/directives.html)
+and their options.
+
+### Images
+
+reStructuredText ``image`` directive's ``align`` option has CSS
+classes for both ``left`` and ``right`` floating:
+
+```
+.. image:: picture.jpeg
+   :alt: alternate text
+   :align: left
+```
