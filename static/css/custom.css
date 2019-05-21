@@ -130,6 +130,7 @@ body {
 
 .footer-pelican {
     padding: 3rem 0;
+    display: inline-block;
 }
 
 /***********/
