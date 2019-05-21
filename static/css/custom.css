@@ -167,3 +167,27 @@ img.align-right {
 .highlight {
     font-size: 90%;
 }
+
+/***********************/
+/*  Table of Contents  */
+/***********************/
+
+.contents {
+    border-top: 1px dashed #eee;
+    border-bottom: 1px dashed #eee;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contents > ul.simple {
+    margin-bottom: 2.5rem;
+    padding-left: 0;
+    margin-top: 0;
+    list-style: square inside;
+}
+
+.topic-title {
+    font-size: 3.0rem;
+    line-height: 1.35;
+    letter-spacing: -.08rem;
+}
