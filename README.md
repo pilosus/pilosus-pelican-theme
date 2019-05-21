@@ -48,6 +48,9 @@ and their options.
 
 ### Images
 
+
+#### Floating left and right
+
 reStructuredText ``image`` directive's ``align`` option has CSS
 classes for both ``left`` and ``right`` floating:
 
@@ -56,3 +59,21 @@ classes for both ``left`` and ``right`` floating:
    :alt: alternate text
    :align: left
 ```
+
+#### Responsive images
+
+You can also make an image responsive (scaling up and down as you
+resize browser window) with ``:class: responsive`` option in ``image``
+directive:
+
+```
+.. image:: {static}/images/htop-minikube.png
+   :alt: htop tool
+   :class: responsive
+   :target: {static}/images/htop-minikube.png
+```
+
+#### Rounded images
+
+Use classes ``.circle`` and ``.rounded`` to render images with
+``border-radius``.

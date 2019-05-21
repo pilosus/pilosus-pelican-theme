@@ -146,6 +146,20 @@ img.align-right {
     padding-left: 1rem;
 }
 
+/* scale up and down */
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.rounded {
+    border-radius: 1em;
+}
+
 /***********/
 /*  Text   */
 /***********/
