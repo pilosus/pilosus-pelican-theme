@@ -77,3 +77,14 @@ directive:
 
 Use classes ``.circle`` and ``.rounded`` to render images with
 ``border-radius``.
+
+
+### Table of Contents
+
+[contents directive](http://docutils.sourceforge.net/docs/ref/rst/directives.html#table-of-contents)
+generates a ``div`` block of class ``contents``. It's also got a CSS
+style in ``custom.css``. Use it in your ``*.rst`` files like so:
+
+```
+.. contents::
+```
