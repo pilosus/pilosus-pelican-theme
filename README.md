@@ -46,6 +46,14 @@ Based on Skeleton CSS, the theme supports all its typography. A few style classe
 to play nicely with some [reStructuredText directives](http://docutils.sourceforge.net/docs/ref/rst/directives.html)
 and their options.
 
+
+### Search input
+
+Use ``DISPLAY_SEARCH`` boolean variable in your settings
+(e.g. ``pelicanconf.py``) to enable/disable text input for Google
+search.  Text submitted to the field is searched in Google with
+``site:{{ SITEURL }}`` argument.
+
 ### Images
 
 
