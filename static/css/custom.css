@@ -124,6 +124,14 @@ body {
     margin-bottom: 0rem;
 }
 
+/****************/
+/*  Pagination  */
+/****************/
+
+.pagination {
+    padding: 2rem 0;
+}
+
 /***********/
 /* Footer  */
 /***********/
@@ -192,3 +200,5 @@ img.align-right {
     line-height: 1.35;
     letter-spacing: -.08rem;
 }
+
+

@@ -1,0 +1,12 @@
+	{% if DEFAULT_PAGINATION %}
+	<section class="pagination">
+	    {% if articles_page.has_previous() %}
+	        <a class="prev-page" href="{{ SITEURL }}/{{ articles_previous_page.url }}"><<</a>
+	    {% endif %}
+	    page {{ articles_page.number }} of {{ articles_paginator.num_pages }}
+	    {% if articles_page.has_next() %}
+	        <a class="next-page" href="{{ SITEURL }}/{{ articles_next_page.url }}">>></a>
+	    {% endif %}
+	</section>
+	{% endif %}
+	
