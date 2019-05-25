@@ -47,8 +47,14 @@
     <div class="container">
 
       <section class="header">
-	<img class="header-img" alt="{{ AUTHOR }}" src="{{ AVATAR_IMAGE }}">
-	<h2 class="title"><a class="header-link" href="{{ SITEURL }}/">{{ SITENAME }} {% if SITESUBTITLE %}<strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h2>
+	<div class="row">
+	  <div class="two columns">
+	    <img class="header-img u-full-width" alt="{{ AUTHOR }}" src="{{ AVATAR_IMAGE }}">
+	  </div>
+	  <div class="ten columns">
+	    <h2 class="title"><a class="header-link" href="{{ SITEURL }}/">{{ SITENAME }} {% if SITESUBTITLE %}<strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h2>
+	  </div>
+	</div>
       </section>
 
       <div class="navbar-spacer"></div>
