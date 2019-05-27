@@ -47,6 +47,15 @@ to play nicely with some [reStructuredText directives](http://docutils.sourcefor
 and their options.
 
 
+### Minutes to read
+
+Template gets use of [word count Pelican
+plugin](https://github.com/pilosus/pilosus_pelican_word_count).  If
+pluging is installed, add ``DISPLAY_WORD_COUNT`` variable to your
+settings and set it to ``True`` in order to show number of words and
+reading time in minutes in articles information block.
+
+
 ### Search input
 
 Use ``DISPLAY_SEARCH`` boolean variable in your settings
