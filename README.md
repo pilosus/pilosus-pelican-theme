@@ -105,3 +105,11 @@ style in ``custom.css``. Use it in your ``*.rst`` files like so:
 ```
 .. contents::
 ```
+
+### Disqus Comments
+
+In order to activate [Disqus comments](https://disqus.com/)
+``DISQUS_SITENAME`` and ``SITEURL`` variables in ``pelicanconf.py`` or
+``publishconf.py``.
+
+Comments are hidden for the drafts and articles with ``:comments: False`` in metadata.
