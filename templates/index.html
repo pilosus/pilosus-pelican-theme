@@ -5,7 +5,7 @@
         <section class="body">
           {% for article in articles_page.object_list %}
           <article class="post-entry">
-            <h4 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h4>
+            <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
             {% include 'article_infos.html' %}
             <div class="post-summary">
               {{ article.summary }}
