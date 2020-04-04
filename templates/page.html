@@ -12,7 +12,7 @@
         {% block content %}
         <section id="content" class="body">
           <article class="page-entry">
-            <h4 class="page-title">{{ page.title }}</h4>
+            <h2 class="page-title">{{ page.title }}</h2>
             {% import 'translations.html' as translations with context %}
             {{ translations.translations_for(page) }}
             {{ page.content }}
