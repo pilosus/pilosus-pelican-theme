@@ -1,20 +1,6 @@
 @font-face {
-    font-family: 'open_sans_regular';
-    src: url('../fonts/open_sans_regular.woff') format('woff'),
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sans_bold';
-    src: url('../fonts/open_sans_regular.woff') format('woff'),
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sans_italic';
-    src: url('../fonts/open_sans_italic.woff') format('woff'),
+    font-family: 'Open Sans';
+    src: url('../fonts/open-sans-regular.woff') format('woff'),
     font-weight: normal;
     font-style: normal;
 }
@@ -23,7 +9,7 @@ body {
   font-size: 1.7em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "open_sans_regular", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   color: #222;
 }
 
