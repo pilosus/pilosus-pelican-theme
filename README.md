@@ -1,8 +1,8 @@
 # Pilosus Pelican Theme
 
 `Pilosus Pelican Theme` is a minimalistic theme for
-[Pelican](https://docs.getpelican.com/en/stable/) based on Pelican's 4.0.1 default theme, 
-a lightweight responsive [Skeleton CSS Boilerplate](http://getskeleton.com/) and 
+[Pelican](https://docs.getpelican.com/en/stable/) based on Pelican's 4.0.1 default theme,
+a lightweight responsive [Skeleton CSS Boilerplate](http://getskeleton.com/) and
 [Pygments](http://pygments.org/) for code syntax highlighting.
 
 
