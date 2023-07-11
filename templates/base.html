@@ -20,9 +20,6 @@
     {% endfor %}
     {% endif %}
 
-    <!-- FONT –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic" rel="stylesheet" type="text/css">
-
     <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/normalize.css" />
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/skeleton.css" />
@@ -64,7 +61,7 @@
 	    {% for title, link in MENUITEMS %}
 	    <li class="navbar-item"><a class="navbar-link" href="{{ link }}">{{ title }}</a></li>
             {% endfor %}
-	    
+
             {% if DISPLAY_PAGES_ON_MENU -%}
             {% for pg in pages %}
             <li class="navbar-item"><a {% if pg == page %} class="navbar-link hl"{% else %} class="navbar-link"{% endif %} href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
