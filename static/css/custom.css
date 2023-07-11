@@ -1,6 +1,7 @@
 @font-face {
+    /* See Apache 2.0 license under ../fonts/LICENSE */
     font-family: 'Open Sans';
-    src: url('../fonts/open-sans-regular.woff') format('woff'),
+    src: url('../fonts/open-sans-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
