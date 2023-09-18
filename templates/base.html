@@ -64,15 +64,16 @@
 	    {% for title, link in MENUITEMS %}
 	    <li class="navbar-item"><a class="navbar-link" href="{{ link }}">{{ title }}</a></li>
             {% endfor %}
-	    
-            {% if DISPLAY_PAGES_ON_MENU -%}
-            {% for pg in pages %}
-            <li class="navbar-item"><a {% if pg == page %} class="navbar-link hl"{% else %} class="navbar-link"{% endif %} href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
-            {% endfor %}
-            {% endif %}
+
             {% if DISPLAY_CATEGORIES_ON_MENU -%}
             {% for cat, null in categories %}
             <li class="navbar-item"><a {% if cat == category %} class="navbar-link hl"{% else %} class="navbar-link"{% endif %} href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+            {% endfor %}
+            {% endif %}
+
+            {% if DISPLAY_PAGES_ON_MENU -%}
+            {% for pg in pages %}
+            <li class="navbar-item"><a {% if pg == page %} class="navbar-link hl"{% else %} class="navbar-link"{% endif %} href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
             {% endfor %}
             {% endif %}
           </ul>
